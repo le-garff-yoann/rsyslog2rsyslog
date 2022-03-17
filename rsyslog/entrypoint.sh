@@ -11,4 +11,7 @@ find /etc/rsyslog.d/ssl -mindepth 1 -exec chown root:root {} \;
 find /etc/rsyslog.d/ssl -mindepth 1 -name *.key -exec chmod 400 {} \;
 find /etc/rsyslog.d/ssl -mindepth 1 -name *.key -exec chown root:root {} \;
 
+touch /var/spool/rsyslog/known.log;
+touch /var/spool/rsyslog/default.log
+
 exec "$@"
